@@ -87,35 +87,3 @@ document.querySelector('[data-action="run-5"]').addEventListener("click", async 
     out.textContent = lines.join("\n");
   });
 });
-
-const parallaxTargets = [
-  { selector: ".layer-1", speed: 8 },
-  { selector: ".layer-2", speed: 16 },
-  { selector: ".planet-a", speed: 24 },
-  { selector: ".planet-b", speed: 32 },
-  { selector: ".planet-c", speed: 20 },
-];
-
-const motion = { x: 0, y: 0, scrollY: 0 };
-
-function renderParallax() {
-  parallaxTargets.forEach(({ selector, speed }, index) => {
-    const el = document.querySelector(selector);
-    if (!el) return;
-    const moveX = motion.x * speed;
-    const moveY = motion.y * speed;
-    const scrollOffset = selector.includes("planet") ? motion.scrollY * (index + 1) * 0.06 : 0;
-    el.style.transform = `translate(${moveX}px, ${moveY + scrollOffset}px)`;
-  });
-}
-
-window.addEventListener("mousemove", (event) => {
-  motion.x = event.clientX / window.innerWidth - 0.5;
-  motion.y = event.clientY / window.innerHeight - 0.5;
-  renderParallax();
-});
-
-window.addEventListener("scroll", () => {
-  motion.scrollY = window.scrollY;
-  renderParallax();
-});
