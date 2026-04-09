@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIRPAZ Test - Interactive UI</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="space-bg">
+      <div class="stars layer-1"></div>
+      <div class="stars layer-2"></div>
+      <div class="planet planet-a"></div>
+      <div class="planet planet-b"></div>
+      <div class="planet planet-c"></div>
+    </div>
+
+    <main class="container">
+      <header class="hero">
+        <h1>AIRPAZ Test Skill - Interactive</h1>
+        <p>Setiap soal dipisahkan agar recruiter mudah memeriksa hasil.</p>
+      </header>
+
+      <section class="card" id="soal-1">
+        <h2>Nomor 1 - Filter by Group</h2>
+        <p>Masukkan group lalu klik jalankan.</p>
+        <div class="controls">
+          <input id="groupInput" value="mammal" />
+          <button data-action="run-1">Jalankan Nomor 1</button>
+        </div>
+        <pre id="output-1"></pre>
+      </section>
+
+      <section class="card" id="soal-2">
+        <h2>Nomor 2 - Priority Sort</h2>
+        <p>Isi urutan prioritas group (pisahkan dengan koma).</p>
+        <div class="controls">
+          <input id="priorityInput" value="reptile, fish, mammal, bird" />
+          <button data-action="run-2">Jalankan Nomor 2</button>
+        </div>
+        <pre id="output-2"></pre>
+      </section>
+
+      <section class="card" id="soal-3">
+        <h2>Nomor 3 - Grouped Object</h2>
+        <div class="controls">
+          <button data-action="run-3">Jalankan Nomor 3</button>
+        </div>
+        <pre id="output-3"></pre>
+      </section>
+
+      <section class="card" id="soal-4">
+        <h2>Nomor 4 - Merge + Grouped (No Duplicate)</h2>
+        <p>Data tambahan default sudah disiapkan sesuai soal.</p>
+        <div class="controls">
+          <button data-action="run-4">Jalankan Nomor 4</button>
+        </div>
+        <pre id="output-4"></pre>
+      </section>
+
+      <section class="card" id="soal-5">
+        <h2>Nomor 5 - Countdown Promise</h2>
+        <p>Klik tombol untuk melihat output animasi 1 detik per baris.</p>
+        <div class="controls">
+          <button data-action="run-5">Jalankan Nomor 5</button>
+        </div>
+        <pre id="output-5"></pre>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+  </html>
